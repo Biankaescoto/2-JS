@@ -165,8 +165,8 @@ if (!myName) {
 
 
 
- ? Arrays
-let arrayOfStuff = ["item 1", "item 2" " ", true, 10]
+//? Arrays
+let arrayOfStuff = ["item 1", "item 2", " ", true, 10]
 
 console.log(arrayOfStuff)
 

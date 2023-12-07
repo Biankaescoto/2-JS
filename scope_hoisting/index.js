@@ -44,6 +44,8 @@ let x = 5;
 
 // console.log (innerScopeVariable); //! ERROR: InnerScopedVariable is not defined
 
+
+
 /*
 
 ? Function Scope
@@ -95,3 +97,62 @@ function outerfx () {
 }
 
 console.log (outerfx()); //=== "Inner fx scope variable"
+
+
+/*
+? Hoisting
+
+*JS' parsing engine reads top to bottom, left to right
+*JS' interpreter runs the code twice
+        -First, it looks for VARiables and fx declarations and hoists them
+        -It  allocates memory space for those declaration
+        -It then executes the code line-by-line
+*/
+
+// console.log(myDog); //! ERROR Cannot access 'myDog' before initialization
+let myDog = "lab";
+console.log (myDog);
+
+console.log(age);   //! Returns undefined 
+var age = 32;   
+// avoid using VAR, use "let" instead
+console.log(age) // prints our value of 32
+
+
+
+x();  //traditional functions grt hoisted. Able to call them before they are declared
+function x () {
+    console.log("function x executed");
+
+
+let y = functions() 
+console.log("Function expressions");
+
+};
+
+
+
+y();
+function run() {
+    var foo ="foo";
+    let bar ="bar";
+    var fxVariable ="test";
+    console.log(foo, bar, fxVariable);
+
+
+{
+    var moo ="moo";
+    let baz ="baz";
+    console.log(moo, baz);
+}
+
+// console.log(baz); //! Error, trying to access a nested scoped variable
+console.log(noo); //Able to print, because var  an be accessed by outer scope
+
+}
+
+
+run();
+//console.log(fxVariable); //!referenceError: fxVariable is not defined 
+
+//! using var is bad practice, don't tru to use hoisting to your "benefit"!!!!!!!
