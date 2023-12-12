@@ -40,7 +40,7 @@ let structure = city[0];
 let pos =0;
 
 while (structure != "empty street") {
-    console.log(`spiderman swings from the ${structure}`)
+    console.log(`spider-man swings from the ${structure}`)
     pos++;
 
     structure = city[pos]
@@ -125,8 +125,8 @@ for (let i = 0; i<=100; i ++) {
 
 
 for(let i = 1; 1<=100; i++) {
-    if(i %3 == 0 && i % == 0)  console.log(`Fizz Buzz ${i}`);
+    if (i %3 == 0 && i % ==0) console.log(`Fizz Buzz ${i}`);
      else if ( i % 3 == 0) { console.log(`Fizz ${i}`);
-    } else if (i % 5 == 0) {console.log(`Buzz ${i}`);
+    } else if (i % 5 == 0) { console.log(`Buzz ${i}`);
     }
 }
